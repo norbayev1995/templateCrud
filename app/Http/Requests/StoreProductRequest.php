@@ -24,7 +24,7 @@ class StoreProductRequest extends FormRequest
         return [
             'title' => 'required|string|min:3|max:100',
             'description' => 'required|string|min:3|max:255',
-            'price' => 'nullable|numeric|min:0',
+            'price' => 'required|regex:/^\d{1,5}(\.\d{1,2})?$/',
         ];
     }
 }

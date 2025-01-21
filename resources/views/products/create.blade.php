@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts/layout')
 @section('title', 'Create New Product')
 @section('content')
 <div class="container mt-5">

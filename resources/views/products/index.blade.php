@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts/layout')
 @section('title', 'Product CRUD')
 @section('content')
 <div class="container mt-5">
@@ -25,6 +25,7 @@
                         <td>{{ $product->price }}</td>
                         <td>
                             <a href="{{ route('products.edit', ['product' => $product]) }}" class="btn btn-warning">Edit</a>
+                            <a href="{{ route('products.show', ['product' => $product]) }}" class="btn btn-success">Show</a>
                             <form action="{{ route('products.destroy', ['product' => $product->id]) }}" method="post" style="display: inline-block">
                                 @csrf
                                 @method('DELETE')
